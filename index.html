@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+<link
+    rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+ 
+/>
+
+<style>
+    
+
+    
+
+    .overlay{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 100vw;
+        height: 100%;
+        z-index: 2;
+     }
+    .section2{
+        background-image:url("./background1.jpg");
+        width:100vw;
+        height:fit-content;
+        top: 0%;
+        left:0%;
+        margin: 0%;
+        padding:0%;
+        position: relative;
+        background-size:cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-areas: 
+        "head head"
+        "main  main";
+        z-index:1;}
+      @media (max-width: 768px) {
+        .section2{
+        background-image:url("./background1.jpg");
+        width:100vw;
+        height:fit-content;
+        top: 0%;
+        left:0%;
+        margin: 0%;
+        padding:0%;
+        position: relative;
+        background-size:cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-areas: 
+        "head head"
+        "main"
+        "main";
+        z-index:1;}
+      .head {
+       align-items: center;
+      justify-content: space-evenly;
+      height: auto;
+      position: static;  
+      }
+
+  .header a {
+    display: block;
+    margin: 10px 5px;
+    font-size: 18px;
+  }
+
+}
+  @media (max-width: 768px) {
+
+  .main {
+    flex-direction: column !important; 
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .main img {
+    width: 80%;       
+    max-width: 300px; 
+    height: auto;     
+    margin: 0 auto;
+    border-radius: 30%; 
+  }
+
+  .text h1 {
+    font-size: 32px;
+    top: 50px;
+  }
+
+  .text h2 {
+    font-size: 18px;
+    position:relative;
+    top:7px;
+  }
+
+  .text p {
+    font-size: 16px; 
+    padding: 0 10px;
+  }
+
+  .text a.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+body{
+        margin:0px ;
+        padding:0px ;
+        height:100%;
+        width:100%;
+        position: sticky;
+        
+        background-image: url("./white-background.jpg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size:contain;
+        background-attachment: fixed;
+        }
+  
+     }
+
+    body{
+        margin:0px ;
+        padding:0px ;
+        height:100vh;
+        position: sticky;
+        
+        background-image: url("./white-background.jpg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size:cover;
+        background-attachment: fixed;
+        }
+    
+    .head{
+       grid-area: head;
+       display: flex;
+       justify-content:end;
+       background-color:rgb(218, 240, 238, 0.7);
+       height: 70px;
+       width:100vw;
+       padding:15px;
+       margin:0px;
+       top: 0;
+       left: 0;
+       position: fixed;
+       z-index: 3;} 
+ 
+    .header a{
+       margin:20px;
+       text-decoration:none !important;
+       color: black;
+       text-align: center;
+    }
+    .header a:hover{
+       color:rgb(5, 112, 55);
+       cursor: pointer;
+       text-decoration: underline !important;
+     }
+    .main{
+        background-repeat: no-repeat;
+        grid-area: main;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        z-index: 3;
+    }
+    .text{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .text p{
+         text-align-last: center;
+         font-size: 30px;
+    }
+    .text a{
+        color: black;
+        text-decoration: none;
+        border:#19381F solid 2px;
+        border-radius: 25%;
+        padding:5px;
+    }
+    .text a:hover{
+        background-color: #19381F;
+        color: white;
+        cursor: pointer;
+    }
+    .main img{
+        grid-area:main;
+        width:550px;
+        height:550px;
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border-radius: 40%;
+        border:2px solid black;
+        box-shadow: inset;
+        z-index: 3;
+    }
+    .main img:hover{
+        transform: scale(1.08);
+        box-shadow: 0 8px 24px rgba(25, 56, 31, 0.35);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    h1{
+        grid-area:main;
+        position: relative;
+        top: 10%;
+        text-align: center;
+        font-size: 70px;
+    } 
+    .aboutme{
+        width: auto;
+        height: fit-content;
+        margin: 20px;
+        position: relative;
+        top: 0%;
+        padding: 20px;
+        border-radius: 25px;
+        border: 1px solid rgba(148, 209, 190, 0.5);
+        background: linear-gradient(360deg, #375d76, rgb(103, 199, 179), #FFFFFF); 
+        opacity: 0.7;
+        backdrop-filter: blur(6px); 
+        box-shadow: 0 4px 12px rgba(25, 56, 31, 0.2); 
+        color: #254b2d;
+        z-index: 1;
+    }
+    .section4{
+        width: auto;
+        height: fit-content;
+        margin: 20px;
+        position: relative;
+        top: 0%;
+        padding: 20px;
+        border-radius: 25px;
+        border: 1px solid rgba(148, 209, 190, 0.5);
+        background: linear-gradient(360deg, #375d76, rgb(103, 199, 179), #FFFFFF); 
+        opacity: 0.7;
+        backdrop-filter: blur(6px); 
+        box-shadow: 0 4px 12px rgba(25, 56, 31, 0.2); 
+        color: #254b2d;
+        z-index: 1;
+    }
+    .section5{
+        width: auto;
+        height: fit-content;
+        margin: 20px;
+        position: relative;
+        top: 0%;
+        padding: 20px;
+        border-radius: 25px;
+        border: 1px solid rgba(148, 209, 190, 0.5);
+        background: linear-gradient(360deg, #375d76, rgb(103, 199, 179), #FFFFFF); 
+        opacity: 0.7;
+        backdrop-filter: blur(6px); 
+        box-shadow: 0 4px 12px rgba(25, 56, 31, 0.2); 
+        color: #254b2d;
+        z-index: 1;
+    }
+    .aboutme h1{
+        text-align:center;
+        margin-top: 0px;
+        color: black;
+    }
+    @media(max-width: 768px) {
+        .aboutme h1{
+        top:3%;
+        color: black;
+    }
+    }
+
+    .projects h1{
+        text-align:center;
+        margin-top: 50px;
+        color: black;
+    }
+
+    .skills h1 {
+        font-size: 70px;
+        margin-bottom: 40px;
+        color: #000000;
+        text-align:center;
+        margin-top: 50px;
+        z-index: 2;
+    }
+
+    .skills-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+       gap: 40px;
+       justify-items: center;
+       align-items: center;
+    }
+
+    .skill {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+       background-color: rgba(255, 255, 255,1);
+       border-radius: 15px;
+       padding: 20px;
+       width:200px;
+       height: 200px;
+       
+    }
+
+.skill img {
+  margin: 15px;
+}
+
+.skill p {
+  font-size: 29px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight:900;
+  color: #291711;
+  margin-top: 12px;
+  margin-bottom: 2%;
+}
+
+.skill:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(25, 56, 31, 0.3);
+  background-color:#1d2911;
+}
+   
+.skill:hover p{
+    color: white;}
+
+.skills img[alt="HTML"]{
+    width: 180px; 
+    height: 180px;
+}
+
+.skills img[alt="CSS"]{
+   width: 220px; 
+   height: 220px; 
+   margin-top: 0px; 
+   padding: 0%;
+}
+
+.skills img[alt="JavaScript"]{
+   width: 150px; 
+   height: 150px; 
+   margin-top:0%; 
+   padding:0%; 
+   margin-bottom:5px;
+}  
+
+.skills img[alt="Java"]{
+   width: 200px; 
+   height: 200px; 
+   margin-top:10px; 
+   padding:0%;
+}
+
+.skills img[alt="Python"]{
+    width: 220px; 
+    height: 220px; 
+    margin-top:10px; 
+    padding:0%;
+}
+
+.skills img[alt="Figma"]{
+    width: 150px; 
+    height: 150px; 
+    margin-top:0%; 
+    padding:0%; 
+    margin-bottom:5px;
+}
+
+.footer {
+  background-color: #19381F;
+  color: #DAF0EE;
+  text-align: center;
+  padding: 25px 10px;
+  border-top: 3px solid #94D1BE;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 0px;
+  opacity: 0.9;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-icons a>i{
+    font-size: 50px;
+  transition: transform 0.3s ease;
+}
+i{
+   margin: 20px;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(72%) sepia(23%) saturate(326%) hue-rotate(108deg) brightness(95%) contrast(92%);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  opacity:1 !important;
+}
+
+.about-text p {
+  font-size: 35px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #000000;
+  z-index: -1;
+}
+
+.about-btn {
+  display: inline-block;
+  background-color: #19381F ;
+  opacity:1;
+  color: #DAF0EE;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.about-btn:hover {
+  background-color: #94D1BE;
+  color: #19381F;
+  transform: scale(1.05);
+}
+.projects h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000000;
+  font-size: 50px;
+
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(25, 56, 31, 0.25);
+  overflow: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 380px;
+  padding-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(25, 56, 31, 0.4);
+}
+
+.project-card img {
+  grid-area: main;
+  width: 300px;
+  height: 300px;
+  margin-left: 40px;
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  object-fit: cover;  
+  aspect-ratio: 1 / 1; 
+  z-index: 3;
+}
+
+.project-card h2 {
+  color: #19381F;
+  text-align: center;
+  margin: 15px 0 10px 0;
+}
+
+.project-card p {
+  text-align: center;
+  padding: 0 15px;
+  color: #254b2d;
+  font-size: 16px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  text-decoration: none;
+  border: 2px solid #19381F;
+  color: #19381F;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: #19381F;
+  color: #fff;
+}
+
+
+ 
+
+</style>
+
+
+<body>
+<section class="section2" id="home">
+ <div class="overlay"></div>
+ <div class="main">
+    <img src="./IMG_4206.jpg" alt="profile_picture" >
+ <div class="text">
+    <h1>Hi, I am <strong>Daisy</strong></h1> 
+    <h2>A Passionate Front-End Developer & Creative Designer</h2>
+    <p>
+      I love transforming ideas into beautiful, functional, and responsive web experiences.
+      My work blends clean design with efficient code.
+      I build visually appealing and responsive websites that blend creativity with functionality.</p>
+<a href="#projects" class="btn">View My Work</a>
+ </div> </div>
+</section>
+<section class="section1" >
+ <div class="head">
+  <h2 class="header"><a href="#home">Home</a></h2>
+   <h2 class="header"><a href="#aboutme">About Me</a></h2>
+   <h2 class="header"><a href="#skills"> Skills</a></h2>
+   <h2 class="header"><a href="#projects">My Projects</a></h2>
+   <h2 class="header"><a href="./Contact form.html">Contact Me</a></h2>  </div>
+</section>    
+<section class="section3" id="aboutme">
+ <div class="aboutme">
+  <h1 id="title">About Me</h1>
+
+  <div class="about-content">
+    <div class="about-text" >
+      <p>
+        Hi! I'm <strong>Daisy</strong> — a front-end developer and creative designer passionate about
+        crafting visually appealing and responsive web experiences. I love transforming simple ideas into
+        elegant, functional websites that not only look good but also feel smooth to use.I am also preety good at backend with Java and Python.
+      </p>
+
+      <p>
+        My expertise includes <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>,<strong>React</strong>,<strong>Java</strong> and <strong>Python</strong>.
+        I also enjoy working with tools like <strong>Figma</strong> to bring my designs to life.
+      </p>
+
+      <p>
+        When I'm not coding, I love exploring new UI/UX trends, improving my design skills,
+        and learning new web technologies that make the web more exciting.
+      </p>
+
+      <a href="./Contact form.html" class="about-btn">Let's Connect</a>
+    </div>
+  </div>
+</div>
+</section>  
+<section class="section4" id="skills">
+ <div class="skills">
+    <h1 id="title">Skills</h1>
+    <div class="skills-grid">
+      <div class="skill">
+        <img src="./html-5-logo.svg" alt="HTML">
+      </div>
+      <div class="skill">
+        <img src="./css3-logo.svg" alt="CSS">
+      </div>
+      <div class="skill">
+        <p >JavaScript</p>
+        <img src="./nodejs-icon-logo.svg" alt="JavaScript">
+      </div>
+      <div class="skill">
+        <img src="./java-4-logo.svg" alt="Java">
+      </div>
+      <div class="skill">
+        <img src="./python-3-logo.svg" alt="Python">
+      </div>
+      <div class="skill">
+        <p>Figma</p>
+        <img src="./figma-1-logo.svg" alt="Figma" >
+      </div>
+    </div>
+  </div> 
+</section>
+<section class="section5" id="projects">
+  <div class="projects">
+    <h1 id="title">My Projects</h1>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="./potfolio.jpeg" alt="Project 1">
+        <h2>Portfolio Website</h2>
+        <p>A personal responsive portfolio built with HTML, CSS, and JavaScript showcasing my work and skills.</p>
+        <div class="project-links">
+          <a href="./portfolio.html">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./ferriswheel.jpeg" alt="Project 2">
+        <h2>Ferris Wheel</h2>
+        <p>“A visually engaging Ferris Wheel simulation showcasing animation and interactive rotation.”</p>
+        <div class="project-links">
+            <a href="./ferriswheel.html" >Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./images.jpeg" alt="Project 3">
+        <h2>Image Gallery</h2>
+        <p>“A responsive image gallery displaying photos in an organized, interactive grid layout.”</p>
+        <div class="project-links">
+          <a href="./gallery.html" >Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<footer class="footer">
+  <p>© 2025 Daisy | Designed & Built with 💚</p>
+
+  <div class="social-icons">
+    <a href="https://github.com/Daisy-002" target="_blank"><i class="fa-brands fa-github" style="color: #000000;"></i></a>
+    <a href="https://www.linkedin.com/in/daisy-pruthi-7a7991362/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0056d6;"></i></a>
+    <a href="mailto:daisypruthi07@gmail.com"><i class="fa-solid fa-envelope" style="color: #77867f;"></i></a>
+  </div>
+</footer>
+</body>
+</html> 

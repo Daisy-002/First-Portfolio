@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient( 360deg, #407158, rgb(103, 199, 179), #FFFFFF);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .contact-container {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 8px 24px rgba(25, 56, 31, 0.2);
+      width: 90%;
+      max-width: 600px;
+      border: 2px solid #94D1BE;
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #19381F;
+      font-size: 32px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #291711;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1.5px solid #94D1BE;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #F7FDFC;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #19381F;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      background-color: #19381F;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #291711;
+    }
+
+    @media (max-width: 500px) {
+      .contact-container {
+        padding: 25px;
+      }
+
+      .contact-container h2 {
+        font-size: 26px;
+      }
+    }
+    .home{
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       padding:15px;
+       margin:0px;
+       z-index: 3;
+       color: rgba(0, 2, 0, 0.8);}
+       .home:hover{
+         color:rgb(247, 247, 247);
+         text-decoration: underline;
+       }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email address" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Your phone number" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Type your message here..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+ <a href="./portfolio.html"> <div class="home"><h5>>Back to Home</h5></div>
+</body>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(246, 224, 249);
+        }
+        .pg{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content:flex-start;
+        }
+        .gallery{
+           margin :20px;
+           border: 1px solid ;
+           width: 400px;
+           height: 400px;
+        }
+
+        img{
+           width:100%;
+           height: auto;
+        }
+        .c, .g, .n, .m{
+            font-size: 50px;
+            padding: 15px;
+            text-align: center;
+        }
+       a{
+        margin-bottom: 0%;
+         margin-right: 0;
+         color: black;
+       }
+       a:hover{
+        color: green;
+       }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 60px; color: rgb(136, 19, 136);">Image Gallery</h1>
+    <div class="pg">
+    <div class="gallery">
+        <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="image">
+         <div class="c">Cinque Terre</div>
+        </div>
+        <div class="gallery">
+        <img src="https://www.w3schools.com/css/img_forest.jpg" alt="image">
+        <div class="g">Green Forest</div>
+        </div>
+        <div class="gallery">
+        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="image">
+        <div class="n">Northern Lights</div> 
+        </div>
+        <div class="gallery">
+        <img src="https://www.w3schools.com/css/img_mountains.jpg" alt="image">
+        <div class="m">Mountains</div>
+        </div> 
+</div>
+   <a href="./portfolio.html" class="back-btn">>Back to Portfolio</a>
+</body>
+</html>
